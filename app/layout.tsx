@@ -30,7 +30,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("dark font-sans", geist.variable)}>
       <body
-        className={`${schibstedGrotesk.variable} ${martianMono.variable} min-h-screen antialiased`}
+        className={cn(
+          schibstedGrotesk.variable,
+          martianMono.variable,
+          // 1. Add background and text colors here
+          "min-h-screen antialiased bg-background text-foreground"
+        )}
       >
         <NavBar></NavBar>
         <div className="absolute inset-0 top-0 z-[-1] min-h-screen">

@@ -2,8 +2,6 @@ import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
 import { IEvent } from "@/database";
 
-import { events } from "@/lib/constants";
-
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const page = async () => {
