@@ -8,8 +8,22 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 const page = async () => {
   "use cache";
   cacheLife("hours");
-  const response = await fetch(`${BASE_URL}/api/events`)
-  const { events } = await response.json();  
+  let events;
+  
+  try {
+    const response = await fetch(`${BASE_URL}/api/events`);
+    
+    if (!response.ok) {
+       throw new Error('Failed to fetch events');
+    }
+
+    const { data } = await response.json();
+    events = data.events;
+    
+  } catch (error) {
+    console.error("Build Error: Ensure NEXT_PUBLIC_BASE_URL is set", error);
+    return <div>Error loading events.</div>;
+  }
 
   return (
     <section>
