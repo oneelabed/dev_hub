@@ -9,7 +9,7 @@ const page = async () => {
   "use cache";
   cacheLife("hours");
   let events;
-  
+
   try {
     const response = await fetch(`${BASE_URL}/api/events`);
     
@@ -17,7 +17,7 @@ const page = async () => {
        throw new Error('Failed to fetch events');
     }
 
-    const { data } = await response.json();
+    const data = await response.json();
     events = data.events;
     
   } catch (error) {
