@@ -1,13 +1,21 @@
 "use client" // => because we are using hooks (useState)
 
+import createBooking from "@/lib/actions/booking.action";
 import React, { useState } from "react"
 
-const BookEvent = () => {
+const BookEvent = ({eventId, slug}: {eventId: string, slug: string}) => {
     const[email, setEmail] = useState("");
     const[submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e: React.SubmitEvent) => {
+    const handleSubmit = async (e: React.SubmitEvent) => {
         e.preventDefault();
+
+        const { success, err } = await createBooking({eventId, slug, email})
+
+        if (success)
+            setSubmitted(true);
+        else
+            console.error('Booking creation failed', err)
 
         setTimeout(() => {
             setSubmitted(true);
