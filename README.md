@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Example project i did for learning Next.js
 
-## Getting Started
+# DevHub 🚀
+The hub for every developer event you can't miss.
 
-First, run the development server:
+DevHub is a production-ready, full-stack application built with Next.js 16 that allows users to browse upcoming tech conferences, view detailed event agendas, and sign up for spots. It leverages a modern tech stack to provide high performance through serverside rendering and intelligent caching.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Key Features
+- **Dynamic Event Routing**: File-based routing with dynamic slugs for SEO-friendly URLs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Hybrid Data Fetching**: Optimized performance using React Server Components and Server Actions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Image Optimization**: Integrated with Cloudinary for seamless, high-performance image uploads and asset management.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Advanced Caching**: Implements the new use cache API and Partial Prerendering (PPR) for lightning-fast page loads.
 
-## Learn More
+- **Modern Styling**: Built with Tailwind CSS v4 and standardizing a clean, dark-themed UI.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
+- **Framework**: Next.js 16 (App Router)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Language**: TypeScript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Database**: MongoDB Atlas with Mongoose
 
-## Deploy on Vercel
+- **Media Hosting**: Cloudinary
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Deployment**: Vercel
